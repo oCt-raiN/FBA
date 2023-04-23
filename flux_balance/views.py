@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse  
 from django.core.files.storage import FileSystemStorage
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import requires_csrf_token
 import os
 import time
 # Create your views here.
