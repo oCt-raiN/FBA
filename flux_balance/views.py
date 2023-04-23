@@ -9,7 +9,7 @@ import time
 path = ""
 def index(request):
     return render(request,'index.html')
-
+@csrf_exempt
 def upload(request):
     if request.method == "POST":
         uploaded_file = request.FILES ['xml']
