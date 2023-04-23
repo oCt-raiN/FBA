@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP</title>
+    <link rel="stylesheet" href="{% static '4.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <input type="button" value="Go back" onclick="history.back()">
+        </form>
+        <h1>Linear programming</h1>
+    <div class="des">
+        <p>
+            The next step in FBA is to define a biological objective that is relevant to the problem being studied . 
+            In the case of predicting growth, the objective is biomass production, the rate at which metabolic compounds are converted into biomass constituents such as nucleic acids, proteins, and lipids. 
+            Mathematically, the objective is represented by an ‘objective function’ that indicates how much each reaction contributes to the phenotype. 
+            A ‘biomass reaction’ that drains precursor metabolites from the system at their relative stoichiometries to simulate biomass production is selected by the objective function in order to predict growth rates. 
+            This reaction is scaled so that the flux through it is equal to the exponential growth rate (µ) of the organism. Taken together, the mathematical representations of the metabolic reactions and of the phenotype define a system of linear equations. 
+            In flux balance analysis, these equations are solved using linear programming. On this website we use the GNU Linear Programming Kit (GLPK). </p>
+          </div>
+
+<div class="image">
+<img src="{% static '/Assets/img/4.1.png' %}">
+<div id="reference">
+    <p> <b>Reference:</b><i> Orth, J.D., Thiele, I. and Palsson, B.Ø. (2010) “What is Flux Balance Analysis?,” Nature Biotechnology, 28(3), pp. 245–248</i>. Available at: <a href="https://doi.org/10.1038/nbt.1614" target="_blank">https://doi.org/10.1038/nbt.1614</a>.</p>
+</div>
+</div>
+
+    </div>
+</body>
+</html>

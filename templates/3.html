@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constraints</title>
+    <link rel="stylesheet" href="{% static '3.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <input type="button" value="Go back" onclick="history.back()">
+        </form>
+        <h1>Constraints</h1>
+    <div class="des">
+        <p>
+    <h3>Constraints are represented in two ways</h3>
+    1) Equations that balance reaction inputs and outputs.<br>
+    2) As inequalities that impose bounds on the system.
+    The matrix of stoichiometries imposes flux (that is, mass) balance constraints on the system, ensuring that the total amount
+    any compound being produced must be equal to the total amount being consumed at steady state .
+    Every reaction can also be given upper and lower bounds, which define the maximum and minimum allowable fluxes of the reactions.
+    These balances and bounds define the space of allowable flux distributions of a system—that is, the rates at which every metabolite is consumed or produced by each reaction. Other constraints can also be added.</p></div>
+    <div class="image">
+        <img src="{% static '/Assets/img/3.1.png' %}">
+        <img src="{% static '/Assets/img/arrow.png' %}">
+        <img src="{% static '/Assets/img/3.2.png' %}">
+
+    </div>
+    <div id="reference">
+        <p> <b>Reference:</b><i> Orth, J.D., Thiele, I. and Palsson, B.Ø. (2010) “What is Flux Balance Analysis?,” Nature Biotechnology, 28(3), pp. 245–248</i>. Available at: <a href="https://doi.org/10.1038/nbt.1614" target="_blank">https://doi.org/10.1038/nbt.1614</a>.</p>
+    </div>
+
+    </div>
+</body>
+</html>

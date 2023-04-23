@@ -1,0 +1,117 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flux Balance Analysis</title>
+    <link rel="stylesheet" href="{% static 'my.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <h1>WEBFBA</h1> 
+        <nav>
+            <ul>
+                <!-- <li><a href="About">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li> -->
+                <li><a href="/help">Help</a></li>
+            </ul> 
+        </nav>
+    </div>
+    <div class="container" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(113, 113, 116, 0.7)),url({% static '/Assets/img/bg_masthead.png' %})">
+        <div class="licenses">
+        <a rel="license" data-spdx="CC-BY-NC-4.0" href="http://creativecommons.org/licenses/bync/4.0/">
+            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png">
+        </a>
+        </div>
+       <!-- Page heading-->
+       <h1 class="mb-5">Get Started With Flux Balance Analysis!</h1>                           
+       <div class="row">
+       <div class="col">
+           <div class="custom-file ">
+            <form action="upload" method='post' enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" class="custom-file-input" name="xml" lang="es" required>
+                </select>
+            </div>
+            <!-- <div class="limit">
+           <input type="number" placeholder="Enter lower limit">
+           <input type="number" placeholder="Enter upper limit">
+           <br> -->
+           <div style="padding-left: 2.6em;">
+            <select name="obj" id="obj">
+                <option value="Maximize">Maximize</option>
+                <option value="Minimize">Minimize</option>
+               </select>
+           </div>
+        </div>
+           <div class="col-auto" style="padding-left: 3.2em;"><button onclick="myFunction()" id="submitButton" type="submit" style="width: fit-content;">Submit</button></div>
+            </form>
+        </div>  
+        <p style="font-size:0.6em; color:rgb(255, 255, 255);">Make sure that your .sbml file contains an objective function</p>
+
+        <div  id="myDIV" style="display: none;">
+          <p class="line-1 anim-typewriter"> Uploaded file is being processed...</p>
+        </div> 
+
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                }
+                } 
+        </script>
+       </div> 
+    </div>
+
+<div class="main">
+    <div class="card">
+        <div class="imgBx">
+        <img src="{% static 'Assets/img/fba.png' %}"></div>
+        <div class="content">
+          <h2>Flux Balance Analysis</h2>
+          <p>Flux balance analysis(FBA) is a mathematical approach for analyzing the flow of metabolites through a metabolic network.</p><br>
+          <button type="button" onclick="location.href='/FBA'">read more..</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="imgBx">
+        <img src="{% static 'Assets/img/stoichiometery.png' %}"></div>
+        <div class="content">
+          <h2>Stoichiometric Matrix</h2>
+          <p>Metabolic reactions are represented as a stoichiometric matrix (S) of size m × n.
+             Every row of this matrix represents one unique compound and every column represents one reaction.</p>
+             <br>
+          <button type="button" onclick="location.href='/stoichiometry'"">read more..</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="imgBx">
+        <img src="{% static 'Assets/img/constraints.png' %}"></div>
+        <div class="content">
+          <h2>Constraints</h2>
+          <p>Constraints are represented in two ways,<br>
+            1) Equations that balance reaction inputs and outputs.
+           </p>
+            <br>
+          <button type="button" onclick="location.href='/constrain'">read more..</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="imgBx">
+        <img src="{% static 'Assets/img/linear.png' %}"></div>
+        <div class="content">
+          <h2>Optimal value</h2>
+          <p>The next step in FBA is to define an ‘objective function’ that indicates how much each reaction contributes to the phenotype.
+        </p>
+        <br>
+          <button type="button" onclick="location.href='/house'">read more..</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

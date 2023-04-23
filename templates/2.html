@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix</title>
+    <link rel="stylesheet" href="{% static '2.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <input type="button" value="Go back" onclick="history.back()">
+        </form>
+        <h1>Stoichiometric Matrix</h1>
+    <div class="des">
+        <p>The first step in FBA is to mathematically represent metabolic reactions. The core feature of this representation is a tabulation, in the form of a numerical matrix.
+            Every row of this matrix represents a metabolite involved and every column represents a reaction.
+                  The entries in each column are the stoichiometric coefficients of the metabolites participating in a reaction. There is a negative coefficient for every metabolite consumed and a positive coefficient for every metabolite that is produced. A stoichiometric coefficient of zero is used for every metabolite that does not participate in a particular reaction.
+            
+            </p>
+        </div>
+        <div class="image">
+        <img src="{% static '/Assets/img/2.1.png' %}">
+        <img src="{% static '/Assets/img/2.2.png' %}">
+        
+    </div>
+    <div id="reference">
+        <p> <b>Reference:</b><i> Orth, J.D., Thiele, I. and Palsson, B.Ø. (2010) “What is Flux Balance Analysis?,” Nature Biotechnology, 28(3), pp. 245–248</i>. Available at: <a href="https://doi.org/10.1038/nbt.1614" target="_blank">https://doi.org/10.1038/nbt.1614</a>.</p>
+    </div>
+    </div>
+    
+</body>
+</html>

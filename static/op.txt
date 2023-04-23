@@ -1,0 +1,8 @@
+Problem:
+Rows:       1972
+Columns:    2382
+Non-zeros:  0
+Status:     OPTIMAL
+Objective:  obj = 680390770.2 (MAXimum)
+
+For more details download result with optimal flux value

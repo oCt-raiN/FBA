@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'res.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-5">Results</h1>
+        <textarea id="freeform" name="freeform" rows="11" cols="60" >
+            {{output}}
+        </textarea>
+    </div>
+    <div class="main">
+    <center>
+        <a href="{{des}}python_reactions.txt" download="reaction.txt"><button class="btn cta">Pathway Reactions</button></a>
+        <a href="{{des}}python_stoichiometric.txt" download="stoichiometry.txt"><button class="btn cta" >Stoichiometric Matrix</button></a>
+        <a href="{{des}}result.txt" download="result.txt"><button class="btn cta ">Optimal Flux Values</button></a>
+        <a href="{{des}}objective_function_py.txt" download="obj_fun.txt"><button class="btn cta ">objective function</button></a>
+    </center>
+    </div>
+</body>
+</html>

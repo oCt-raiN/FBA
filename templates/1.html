@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBA</title>
+    <link rel="stylesheet" href="{% static '1.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <input type="button" value="Go back" onclick="history.back()">
+        </form>
+    <h1>What is Flux Balance Analysis?</h1>
+    <div class="des">
+    <p> A mathematical method for examining the movement of metabolites through a metabolic network is called flux balance analysis (FBA).
+        An organism's metabolism is a process that keeps a series of reactions going in order to support it.
+        A metabolic pathway can be used to describe all of these chemical processes in an organism.
+        FBA calculates the flow of metabolites via this metabolic network, making it possible to forecast an organism's growth rate as well as the flux values needed to boost metabolite production in an organism.
+        
+    </p>
+    </div>
+    <div class="image">
+        <h1>Overview of FBA</h1>
+        <img src="{% static '/Assets/img/1.1.png' %}">
+    </div>
+    <div id="reference">
+        <p> <b>Reference:</b><i> Orth, J.D., Thiele, I. and Palsson, B.Ø. (2010) “What is Flux Balance Analysis?,” Nature Biotechnology, 28(3), pp. 245–248</i>. Available at: <a href="https://doi.org/10.1038/nbt.1614" target="_blank">https://doi.org/10.1038/nbt.1614</a>.</p>
+    </div>
+</div>
+</body>
+</html>
