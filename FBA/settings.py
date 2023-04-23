@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&4kg6dse1p#1w@d#=iv&he3vjlv8rh3+#k&ld4kxb+hd#8fbht
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://oct-rain-cautious-journey-vxp69xvqxpqcwgw5-46657.preview.app.github.dev/']
 
 
 # Application definition
